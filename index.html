@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishna Kanth M | MCA Student & AI/ML Enthusiast</title>
+  <meta name="description" content="Portfolio of Krishna Kanth M - MCA Student, AI/ML Enthusiast, and Frontend Developer. Explore projects, skills, education, and resume.">
+  <meta name="keywords" content="Krishna Kanth M, Portfolio, MCA, AI/ML, Python, Frontend Developer, Kumaraguru College of Technology">
+  <meta name="author" content="Krishna Kanth M">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Krishna Kanth M | Portfolio & AI/ML Enthusiast">
+  <meta property="og:description" content="Explore my projects in IoT, Machine Learning, and Modern Web Development.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Typed.js & Vanilla Tilt CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+            mono: ['Fira Code', 'monospace']
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1', // Electric Violet / Indigo
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+              accent: '#8b5cf6',
+              cyan: '#06b6d4'
+            }
+          },
+          animation: {
+            'blob': 'blob 12s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+            'blob-slow': 'blob 18s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+            'pulse-subtle': 'pulseSubtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(40px, -60px) scale(1.15)' },
+              '66%': { transform: 'translate(-30px, 30px) scale(0.92)' }
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '0.4' },
+              '50%': { opacity: '0.8' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Glassmorphic Core Styles */
+    .glass-card {
+      background: rgba(18, 24, 38, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 35px -5px rgba(0, 0, 0, 0.4);
+    }
+    
+    .glass-card-hover {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.25);
+    }
+
+    .glass-nav {
+      background: rgba(10, 14, 26, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 40%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-border {
+      position: relative;
+    }
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(168, 85, 247, 0.3), rgba(6, 182, 212, 0.4));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    /* Glow blobs */
+    .blob-indigo {
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(99, 102, 241, 0) 70%);
+    }
+    .blob-purple {
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0) 70%);
+    }
+    .blob-cyan {
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, rgba(6, 182, 212, 0) 70%);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0e1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #312e81;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body class="bg-[#080c16] text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen relative overflow-x-hidden">
+
+  <!-- Ambient Glowing Mesh Gradient Blobs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-32 -left-32 w-[550px] h-[550px] blob-indigo rounded-full blur-3xl animate-blob opacity-70"></div>
+    <div class="absolute top-1/3 -right-32 w-[600px] h-[600px] blob-purple rounded-full blur-3xl animate-blob-slow opacity-60" style="animation-delay: 3s;"></div>
+    <div class="absolute bottom-20 left-1/4 w-[500px] h-[500px] blob-cyan rounded-full blur-3xl animate-blob opacity-50" style="animation-delay: 6s;"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-500 to-purple-500 flex items-center justify-center font-display font-bold text-white shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform duration-300">
+          K
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg text-white tracking-wide group-hover:text-brand-300 transition-colors">Krishna Kanth</span>
+          <span class="text-xs text-brand-300/80 font-mono">Portfolio.dev</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 bg-slate-900/60 p-1.5 rounded-full border border-white/10 backdrop-blur-md">
+        <a href="#about" class="px-3.5 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">About</a>
+        <a href="#skills" class="px-3.5 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Skills</a>
+        <a href="#experience" class="px-3.5 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Experience</a>
+        <a href="#projects" class="px-3.5 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Projects</a>
+        <a href="#education" class="px-3.5 py-1.5 rounded-full text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all">Education</a>
+      </nav>
+
+      <!-- CTA & ATS Resume Links -->
+      <div class="hidden sm:flex items-center space-x-3">
+        <a href="resume.html" target="_blank" class="px-4 py-2 text-sm font-medium rounded-xl text-brand-200 bg-brand-500/10 border border-brand-500/30 hover:bg-brand-500/20 hover:border-brand-500/60 transition-all duration-200 flex items-center gap-2 group shadow-sm">
+          <i class="fa-regular fa-file-lines text-brand-400 group-hover:scale-110 transition-transform"></i>
+          <span>ATS Resume</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-400 opacity-70"></i>
+        </a>
+        <a href="#contact" class="magnetic-btn px-5 py-2 text-sm font-semibold rounded-xl text-white bg-gradient-to-r from-brand-600 via-brand-500 to-purple-600 hover:from-brand-500 hover:to-purple-500 shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transition-all duration-300 transform hover:-translate-y-0.5">
+          Contact Me
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-toggle" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-slate-950/95 border-b border-white/10 backdrop-blur-2xl">
+      <div class="flex flex-col space-y-3">
+        <a href="#about" class="mobile-link px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">About</a>
+        <a href="#skills" class="mobile-link px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Skills</a>
+        <a href="#experience" class="mobile-link px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Experience</a>
+        <a href="#projects" class="mobile-link px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Projects</a>
+        <a href="#education" class="mobile-link px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/10">Education</a>
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="resume.html" target="_blank" class="w-full text-center py-2.5 rounded-lg text-sm font-medium text-brand-200 bg-brand-500/10 border border-brand-500/30">
+            <i class="fa-regular fa-file-lines mr-2"></i> View ATS Resume
+          </a>
+          <a href="#contact" class="mobile-link w-full text-center py-2.5 rounded-lg text-sm font-semibold text-white bg-brand-600">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="relative z-10 pt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-32">
+
+    <!-- HERO SECTION (Option C: Glowing Gradient Blob with Glassmorphism) -->
+    <section id="hero" class="min-h-[85vh] flex items-center justify-center pt-8 pb-12">
+      <div class="w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text Content -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-mono tracking-wide backdrop-blur-md">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Available for Roles & AI Projects</span>
+            </div>
+
+            <!-- Main Heading -->
+            <div class="space-y-2">
+              <h2 class="text-slate-400 font-display text-lg sm:text-xl font-medium tracking-wide">Hello World! I'm</h2>
+              <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white tracking-tight leading-tight">
+                Krishna <span class="gradient-text">Kanth M</span>
+              </h1>
+            </div>
+
+            <!-- Dynamic Typed Roles -->
+            <div class="h-10 sm:h-12 flex items-center justify-center lg:justify-start text-xl sm:text-2xl font-mono text-slate-300">
+              <span class="text-brand-400 mr-2">&gt;</span>
+              <span id="typed-roles" class="text-brand-200 font-semibold"></span>
+            </div>
+
+            <!-- Bio Summary -->
+            <p class="text-slate-300/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+              Motivated MCA student at <strong class="text-white font-medium">Kumaraguru College of Technology</strong> with a strong foundation in <span class="text-brand-300 font-medium">Artificial Intelligence, Machine Learning, Python, and Modern Web Design</span>. Passionate about engineering intelligent, human-centric software solutions.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <a href="#projects" class="magnetic-btn px-7 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-purple-600 hover:from-brand-500 hover:to-purple-500 shadow-xl shadow-brand-500/30 hover:shadow-brand-500/50 transition-all duration-300 flex items-center gap-3 group">
+                <span>Explore Projects</span>
+                <i class="fa-solid fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+              </a>
+
+              <a href="resume.html" target="_blank" class="magnetic-btn px-6 py-3.5 rounded-xl font-medium text-slate-200 glass-card hover:bg-white/10 hover:text-white border-white/15 transition-all duration-300 flex items-center gap-2.5">
+                <i class="fa-regular fa-file-pdf text-brand-400"></i>
+                <span>ATS Resume</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400"></i>
+              </a>
+            </div>
+
+            <!-- Quick Social Bar -->
+            <div class="pt-4 flex items-center justify-center lg:justify-start gap-5 text-slate-400">
+              <a href="https://github.com/krishna-kanth-m" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl glass-card hover:text-brand-300 hover:border-brand-500/40 transition-all hover:scale-110" aria-label="GitHub Profile">
+                <i class="fa-brands fa-github text-xl"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/krishna-kanth-m-b48970384" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl glass-card hover:text-brand-300 hover:border-brand-500/40 transition-all hover:scale-110" aria-label="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in text-xl"></i>
+              </a>
+              <a href="mailto:krishnakanth.m16@gmail.com" class="p-2.5 rounded-xl glass-card hover:text-brand-300 hover:border-brand-500/40 transition-all hover:scale-110" aria-label="Email Me">
+                <i class="fa-solid fa-envelope text-xl"></i>
+              </a>
+              <a href="tel:9080110139" class="p-2.5 rounded-xl glass-card hover:text-brand-300 hover:border-brand-500/40 transition-all hover:scale-110" aria-label="Phone Contact">
+                <i class="fa-solid fa-phone text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Avatar & Glass Badge Card -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="tilt-card relative w-full max-w-sm" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.25">
+              
+              <!-- Ambient card glow -->
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-500 via-purple-500 to-cyan-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500"></div>
+
+              <!-- Main Glass Card Container -->
+              <div class="relative glass-card rounded-3xl p-6 sm:p-8 border border-white/15 backdrop-blur-2xl text-center space-y-6">
+                
+                <!-- Avatar with fallback -->
+                <div class="relative mx-auto w-36 h-36 sm:w-44 sm:h-44">
+                  <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-brand-500 to-purple-600 blur-md opacity-60 animate-pulse-subtle"></div>
+                  <img 
+                    src="profile.jpg" 
+                    alt="Krishna Kanth M" 
+                    id="profile-avatar"
+                    onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Krishna+Kanth+M&background=6366f1&color=ffffff&size=256&bold=true';"
+                    class="relative w-full h-full object-cover rounded-2xl border-2 border-white/20 shadow-2xl p-1 bg-slate-900/60"
+                  >
+                  <div class="absolute -bottom-2 -right-2 bg-slate-900/90 border border-brand-500/40 px-2.5 py-1 rounded-full text-[11px] font-mono text-brand-300 flex items-center gap-1 shadow-lg">
+                    <i class="fa-solid fa-bolt text-yellow-400"></i> AI/ML
+                  </div>
+                </div>
+
+                <!-- Bio highlights inside card -->
+                <div class="space-y-1.5">
+                  <h3 class="text-xl font-display font-bold text-white">Krishna Kanth M</h3>
+                  <p class="text-sm text-brand-300 font-mono">MCA Student & Developer</p>
+                  <p class="text-xs text-slate-400">Kumaraguru College of Technology</p>
+                </div>
+
+                <!-- Quick Metric Pills -->
+                <div class="grid grid-cols-2 gap-2.5 pt-2 text-left">
+                  <div class="p-2.5 rounded-xl bg-white/[0.03] border border-white/10">
+                    <span class="text-[11px] text-slate-400 block font-mono">B.Voc ICT</span>
+                    <span class="text-base font-bold text-emerald-400 font-display">9.29 CGPA</span>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white/[0.03] border border-white/10">
+                    <span class="text-[11px] text-slate-400 block font-mono">Cloud Foundations</span>
+                    <span class="text-base font-bold text-brand-300 font-display">NPTEL 73%</span>
+                  </div>
+                </div>
+
+                <!-- GitHub Status indicator -->
+                <div class="pt-1 flex items-center justify-between text-xs text-slate-400 border-t border-white/10 pt-3">
+                  <span class="flex items-center gap-1.5">
+                    <i class="fa-brands fa-github text-slate-300"></i> @krishna-kanth-m
+                  </span>
+                  <span class="text-emerald-400 font-mono">● Active</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="space-y-10 scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs sm:text-sm font-mono text-brand-400 tracking-widest uppercase">Overview</h2>
+        <p class="text-3xl sm:text-4xl font-display font-bold text-white">About Me & Aspirations</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Main Narrative -->
+        <div class="lg:col-span-7 glass-card rounded-3xl p-8 space-y-6">
+          <h3 class="text-2xl font-display font-bold text-white flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center text-sm border border-brand-500/30">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </span>
+            Building Intelligence & Scalable Interfaces
+          </h3>
+          <p class="text-slate-300 leading-relaxed">
+            I am a motivated Master of Computer Applications (MCA) student at Kumaraguru College of Technology, driven by a deep fascination for <strong class="text-white">Artificial Intelligence, Machine Learning, and Modern Software Engineering</strong>.
+          </p>
+          <p class="text-slate-300 leading-relaxed">
+            With hands-on background in frontend development and foundational knowledge in Python, SQL, and prompt engineering, I enjoy converting conceptual algorithms into functional, elegant, and user-friendly digital experiences. I am actively strengthening my analytical and problem-solving abilities to contribute meaningfully as an ML Engineer and full-stack software innovator.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/10 space-y-1">
+              <div class="text-brand-400 font-semibold text-sm flex items-center gap-2">
+                <i class="fa-solid fa-brain"></i> AI & ML Enthusiast
+              </div>
+              <p class="text-xs text-slate-400">Exploring neural architectures, predictive modeling, and intelligent agent systems.</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/10 space-y-1">
+              <div class="text-brand-400 font-semibold text-sm flex items-center gap-2">
+                <i class="fa-solid fa-laptop-code"></i> Frontend & UI Workflows
+              </div>
+              <p class="text-xs text-slate-400">Crafting responsive, accessible, and high-performance user interfaces.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights & Quick Specs -->
+        <div class="lg:col-span-5 space-y-4">
+          <!-- Card 1 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-5 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/30 flex-shrink-0 flex items-center justify-center text-brand-400 text-xl">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">MCA Program (2025–2027)</h4>
+              <p class="text-xs text-brand-300 font-mono">Kumaraguru College of Technology</p>
+              <p class="text-xs text-slate-400 mt-1">Specializing in Advanced Computer Applications and Intelligent Systems.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-5 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex-shrink-0 flex items-center justify-center text-emerald-400 text-xl">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">B.Voc in ICT (2022–2025)</h4>
+              <p class="text-xs text-emerald-300 font-mono">National College • 9.29 CGPA</p>
+              <p class="text-xs text-slate-400 mt-1">Exceptional academic excellence in computer technology and programming.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card glass-card-hover rounded-2xl p-5 flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex-shrink-0 flex items-center justify-center text-purple-400 text-xl">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-white">Google Cloud Certified</h4>
+              <p class="text-xs text-purple-300 font-mono">NPTEL Computing Foundations (73%)</p>
+              <p class="text-xs text-slate-400 mt-1">Cloud architecture concepts, compute services, and storage paradigms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="space-y-10 scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs sm:text-sm font-mono text-brand-400 tracking-widest uppercase">Capabilities</h2>
+        <p class="text-3xl sm:text-4xl font-display font-bold text-white">Technical & Soft Skills</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Category 1: AI, ML & Data -->
+        <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-lg border border-purple-500/30">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg">AI & Machine Learning</h3>
+              <p class="text-xs text-slate-400 font-mono">Intelligent Computing</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-medium">Machine Learning (Basics)</span>
+            <span class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-medium">Artificial Intelligence</span>
+            <span class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-medium">Prompt Engineering</span>
+            <span class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-medium">Antigravity AI Tools</span>
+            <span class="px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-medium">Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Core Programming & Backend -->
+        <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-lg border border-brand-500/30">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg">Programming & Database</h3>
+              <p class="text-xs text-slate-400 font-mono">Core Foundations</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-medium">Python Fundamentals</span>
+            <span class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-medium">SQL & Database Querying</span>
+            <span class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-medium">Data Structures</span>
+            <span class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-medium">Algorithms</span>
+            <span class="px-3 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-medium">Object-Oriented Coding</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Frontend & Web Design -->
+        <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg border border-cyan-500/30">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg">Frontend & Design</h3>
+              <p class="text-xs text-slate-400 font-mono">UI/UX & Web Workflows</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-medium">Frontend Development</span>
+            <span class="px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-medium">HTML5 & Modern CSS</span>
+            <span class="px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-medium">Responsive Web Design</span>
+            <span class="px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-medium">UI Prototyping</span>
+            <span class="px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-medium">Canva</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Cloud & Tools -->
+        <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-4">
+          <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg border border-emerald-500/30">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg">Cloud & Tools</h3>
+              <p class="text-xs text-slate-400 font-mono">Ecosystem</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-200 text-xs font-medium">Google Cloud (NPTEL)</span>
+            <span class="px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-200 text-xs font-medium">Git & GitHub</span>
+            <span class="px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-200 text-xs font-medium">Microsoft Office Suite</span>
+            <span class="px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-200 text-xs font-medium">IoT Sensor Hardware</span>
+          </div>
+        </div>
+
+        <!-- Category 5: Soft Skills & Team Power -->
+        <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-4 md:col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-lg border border-rose-500/30">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-lg">Soft Skills & Collaboration</h3>
+              <p class="text-xs text-slate-400 font-mono">Professional Mindset</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+              <i class="fa-solid fa-puzzle-piece text-rose-400 mb-1"></i>
+              <div class="text-xs font-semibold text-white">Problem Solving</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+              <i class="fa-solid fa-comments text-rose-400 mb-1"></i>
+              <div class="text-xs font-semibold text-white">Effective Communication</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+              <i class="fa-solid fa-people-group text-rose-400 mb-1"></i>
+              <div class="text-xs font-semibold text-white">Team Collaboration</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+              <i class="fa-solid fa-arrows-spin text-rose-400 mb-1"></i>
+              <div class="text-xs font-semibold text-white">Adaptability & Agility</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+              <i class="fa-solid fa-ear-listen text-rose-400 mb-1"></i>
+              <div class="text-xs font-semibold text-white">Active Listening</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-center">
+              <i class="fa-solid fa-seedling text-rose-400 mb-1"></i>
+              <div class="text-xs font-semibold text-white">Continuous Growth</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="space-y-10 scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs sm:text-sm font-mono text-brand-400 tracking-widest uppercase">Career Journey</h2>
+        <p class="text-3xl sm:text-4xl font-display font-bold text-white">Internship Experience</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="relative border-l-2 border-brand-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+          
+          <!-- FG Global Internship -->
+          <div class="relative group">
+            <!-- Timeline dot -->
+            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full bg-slate-900 border-2 border-brand-400 flex items-center justify-center shadow-lg shadow-brand-500/50 group-hover:scale-125 transition-transform">
+              <div class="w-2 h-2 rounded-full bg-brand-400"></div>
+            </div>
+
+            <!-- Content Card -->
+            <div class="glass-card glass-card-hover rounded-3xl p-6 sm:p-8 space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
+                <div>
+                  <h3 class="text-xl sm:text-2xl font-display font-bold text-white">Frontend Developer Intern</h3>
+                  <p class="text-brand-300 font-mono text-sm font-medium">FG Global</p>
+                </div>
+                <span class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-mono w-fit">
+                  <i class="fa-regular fa-calendar mr-2"></i> August 2024
+                </span>
+              </div>
+
+              <ul class="space-y-3 text-slate-300 text-sm sm:text-base">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check text-brand-400 mt-1 flex-shrink-0"></i>
+                  <span>Worked directly on frontend design, architecture, and user interface development workflows.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check text-brand-400 mt-1 flex-shrink-0"></i>
+                  <span>Gained hands-on practical experience in building responsive, cross-device, and user-friendly web interfaces.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle-check text-brand-400 mt-1 flex-shrink-0"></i>
+                  <span>Improved technical understanding of modern UI/UX principles, component modularity, and rapid prototyping workflows.</span>
+                </li>
+              </ul>
+
+              <div class="pt-2 flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300 font-mono">UI/UX Design</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300 font-mono">Responsive Web</span>
+                <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/10 text-xs text-slate-300 font-mono">Frontend Workflows</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Glassmorphism & 3D Tilt) -->
+    <section id="projects" class="space-y-10 scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs sm:text-sm font-mono text-brand-400 tracking-widest uppercase">Portfolio Highlights</h2>
+        <p class="text-3xl sm:text-4xl font-display font-bold text-white">Featured Projects</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: IoT Home Automation -->
+        <div class="tilt-card glass-card glass-card-hover rounded-3xl p-7 flex flex-col justify-between space-y-6" data-tilt data-tilt-max="8" data-tilt-speed="300">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl border border-cyan-500/30">
+              <i class="fa-solid fa-house-signal"></i>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-cyan-300 tracking-wide uppercase">Hardware & Embedded Systems</span>
+              <h3 class="text-2xl font-display font-bold text-white">IoT Based Home Automation System</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Developed an academic engineering project focused on automating residential appliances through IoT concepts. Enabled real-time remote monitoring and control of connected devices to improve convenience, safety, and energy efficiency.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 pt-1">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-cyan-400"></i> Remote wireless control & telemetry
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-cyan-400"></i> Energy efficiency optimization
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-cyan-400"></i> Team leadership and project implementation
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4 pt-4 border-t border-white/10">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-mono">IoT</span>
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-mono">Automation</span>
+              <span class="px-2.5 py-1 rounded-lg bg-cyan-500/10 border border-cyan-500/25 text-cyan-200 text-xs font-mono">Sensors</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: AI & ML Exploration System -->
+        <div class="tilt-card glass-card glass-card-hover rounded-3xl p-7 flex flex-col justify-between space-y-6" data-tilt data-tilt-max="8" data-tilt-speed="300">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-2xl border border-purple-500/30">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-purple-300 tracking-wide uppercase">AI / Machine Learning</span>
+              <h3 class="text-2xl font-display font-bold text-white">AI & ML Research & Modeling Lab</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Applied machine learning models and exploratory data analysis using Python and SQL to uncover patterns, evaluate algorithmic performance, and leverage prompt engineering workflows for automated problem solving.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 pt-1">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-purple-400"></i> Python data pipelines & analytics
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-purple-400"></i> Prompt engineering experimentation
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-purple-400"></i> Machine learning algorithms evaluation
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4 pt-4 border-t border-white/10">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-mono">Python</span>
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-mono">Machine Learning</span>
+              <span class="px-2.5 py-1 rounded-lg bg-purple-500/10 border border-purple-500/25 text-purple-200 text-xs font-mono">Prompt Eng</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Responsive Glassmorphism Portfolio & ATS Suite -->
+        <div class="tilt-card glass-card glass-card-hover rounded-3xl p-7 flex flex-col justify-between space-y-6" data-tilt data-tilt-max="8" data-tilt-speed="300">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-2xl border border-brand-500/30">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="space-y-1">
+              <span class="text-xs font-mono text-brand-300 tracking-wide uppercase">Web Application & Design</span>
+              <h3 class="text-2xl font-display font-bold text-white">Portfolio & ATS Resume Suite</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Designed and deployed an ultra-modern personal portfolio with 3D micro-interactions, ambient gradient animations, and a dedicated ATS-optimized printable resume page hosted seamlessly via GitHub Pages.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1.5 pt-1">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-400"></i> Glassmorphic design system
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-400"></i> ATS-optimized print CSS engine
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-brand-400"></i> Live deployment with custom initial avatar
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-4 pt-4 border-t border-white/10">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-lg bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-mono">Tailwind CSS</span>
+              <span class="px-2.5 py-1 rounded-lg bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-mono">JavaScript</span>
+              <span class="px-2.5 py-1 rounded-lg bg-brand-500/10 border border-brand-500/25 text-brand-200 text-xs font-mono">GitHub Pages</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section id="education" class="space-y-10 scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs sm:text-sm font-mono text-brand-400 tracking-widest uppercase">Academic Background</h2>
+        <p class="text-3xl sm:text-4xl font-display font-bold text-white">Education & Certifications</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Education Stack -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-building-columns text-brand-400"></i> Formal Education
+          </h3>
+
+          <!-- MCA -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="text-lg font-bold text-white">Master of Computer Applications (MCA)</h4>
+                <p class="text-brand-300 font-medium text-sm">Kumaraguru College of Technology</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-mono">
+                2025 – 2027
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm">
+              Focusing on advanced computational methods, intelligent systems, software architecture, and modern application development.
+            </p>
+          </div>
+
+          <!-- B.Voc -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-3">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="text-lg font-bold text-white">B.Voc in Information & Communication Tech</h4>
+                <p class="text-brand-300 font-medium text-sm">National College</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
+                2022 – 2025
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-mono text-sm font-semibold">
+                CGPA: 9.29 / 10.0
+              </span>
+              <span class="text-xs text-slate-400">First Class with Distinction</span>
+            </div>
+            <p class="text-slate-300 text-sm">
+              Comprehensive coursework in software development, data systems, computer networking, and applied technology.
+            </p>
+          </div>
+        </div>
+
+        <!-- Certifications Stack -->
+        <div class="space-y-6">
+          <h3 class="text-xl font-display font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-certificate text-purple-400"></i> Certifications & Honors
+          </h3>
+
+          <!-- Google Cloud NPTEL -->
+          <div class="glass-card glass-card-hover rounded-3xl p-6 space-y-4">
+            <div class="flex items-start justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-600 to-purple-600 flex items-center justify-center text-white text-xl shadow-lg shadow-brand-500/30">
+                  <i class="fa-brands fa-google"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-white">Google Cloud Computing Foundations</h4>
+                  <p class="text-purple-300 font-medium text-sm">NPTEL Certification</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-xs font-mono">
+                Score: 73%
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm">
+              Demonstrated proficiency in cloud architecture, virtual machines, cloud storage, security models, and cloud-native solutions.
+            </p>
+            <div class="flex items-center gap-2 text-xs text-brand-300">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Credential
+            </div>
+          </div>
+
+          <!-- Continuous Learning Highlight -->
+          <div class="glass-card rounded-3xl p-6 border-dashed border-white/20 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-slate-300 text-xl flex-shrink-0">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="space-y-1">
+              <h4 class="text-white font-semibold text-sm">Lifelong Learner Mindset</h4>
+              <p class="text-xs text-slate-400">Regularly upskilling in AI frameworks, prompt engineering workflows, and system design patterns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="space-y-10 scroll-mt-28 pb-16">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <h2 class="text-xs sm:text-sm font-mono text-brand-400 tracking-widest uppercase">Get In Touch</h2>
+        <p class="text-3xl sm:text-4xl font-display font-bold text-white">Let's Connect & Collaborate</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-brand-500 to-purple-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-64 h-64 blob-indigo rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 blob-purple rounded-full blur-3xl opacity-40"></div>
+
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          
+          <div class="space-y-6">
+            <h3 class="text-2xl font-display font-bold text-white">Have an opportunity or project in mind?</h3>
+            <p class="text-slate-300 leading-relaxed text-sm">
+              I am actively seeking internship opportunities, collaborative AI/ML projects, and software engineering roles. Feel free to reach out directly!
+            </p>
+
+            <div class="space-y-3.5 text-sm">
+              <!-- Email Item with Copy Button -->
+              <div class="flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.03] border border-white/10">
+                <a href="mailto:krishnakanth.m16@gmail.com" class="flex items-center gap-3 text-slate-200 hover:text-brand-300 transition-colors">
+                  <i class="fa-solid fa-envelope text-brand-400"></i>
+                  <span class="font-mono text-xs sm:text-sm">krishnakanth.m16@gmail.com</span>
+                </a>
+                <button onclick="copyEmail()" class="text-xs text-slate-400 hover:text-white px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 transition-all flex items-center gap-1.5" title="Copy Email">
+                  <i class="fa-regular fa-copy" id="copy-icon"></i>
+                  <span id="copy-text">Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone Item -->
+              <a href="tel:9080110139" class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 text-slate-200 hover:text-brand-300 transition-colors">
+                <i class="fa-solid fa-phone text-brand-400"></i>
+                <span class="font-mono text-xs sm:text-sm">+91 9080110139</span>
+              </a>
+
+              <!-- LinkedIn Item -->
+              <a href="https://www.linkedin.com/in/krishna-kanth-m-b48970384" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 text-slate-200 hover:text-brand-300 transition-colors">
+                <i class="fa-brands fa-linkedin-in text-brand-400"></i>
+                <span class="text-xs sm:text-sm">Krishna Kanth M on LinkedIn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 ml-auto"></i>
+              </a>
+
+              <!-- GitHub Item -->
+              <a href="https://github.com/krishna-kanth-m" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10 text-slate-200 hover:text-brand-300 transition-colors">
+                <i class="fa-brands fa-github text-brand-400"></i>
+                <span class="text-xs sm:text-sm">github.com/krishna-kanth-m</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 ml-auto"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct Message Box -->
+          <div class="glass-card rounded-2xl p-6 border border-white/15 space-y-4">
+            <h4 class="text-lg font-display font-semibold text-white">Send a Quick Message</h4>
+            <form onsubmit="handleContactSubmit(event)" class="space-y-3.5">
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Your Name</label>
+                <input type="text" id="contact-name" required placeholder="John Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Your Email</label>
+                <input type="email" id="contact-email" required placeholder="john@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-slate-300 mb-1">Message</label>
+                <textarea id="contact-msg" rows="3" required placeholder="Hi Krishna, I'd like to discuss..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-purple-600 hover:from-brand-500 hover:to-purple-500 shadow-lg shadow-brand-500/30 transition-all">
+                Send via Email <i class="fa-solid fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t border-white/10 bg-slate-950/80 py-10 mt-20 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-display font-bold text-white text-sm">
+          K
+        </div>
+        <span class="text-sm text-slate-400 font-mono">© 2026 Krishna Kanth M. All rights reserved.</span>
+      </div>
+      <div class="flex items-center space-x-6 text-sm text-slate-400">
+        <a href="resume.html" target="_blank" class="hover:text-brand-300 transition-colors">ATS Resume</a>
+        <a href="https://github.com/krishna-kanth-m" target="_blank" class="hover:text-brand-300 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/krishna-kanth-m-b48970384" target="_blank" class="hover:text-brand-300 transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Typed.js, Tilt & Magnetic Buttons -->
+  <script>
+    // 1. Typed.js Initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      new Typed('#typed-roles', {
+        strings: [
+          'MCA Student @ Kumaraguru',
+          'AI / ML Enthusiast',
+          'Frontend Developer',
+          'Python & SQL Developer',
+          'Problem Solver'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1800,
+        loop: true
+      });
+
+      // Initialize Vanilla Tilt on .tilt-card
+      if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+          max: 10,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.2,
+        });
+      }
+    });
+
+    // 2. Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 3. Copy Email to Clipboard Functionality
+    function copyEmail() {
+      const email = "krishnakanth.m16@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const copyText = document.getElementById('copy-text');
+        const copyIcon = document.getElementById('copy-icon');
+        copyText.textContent = "Copied!";
+        copyIcon.className = "fa-solid fa-check text-emerald-400";
+        setTimeout(() => {
+          copyText.textContent = "Copy";
+          copyIcon.className = "fa-regular fa-copy";
+        }, 2500);
+      });
+    }
+
+    // 4. Contact Form Handler (Direct to mailto)
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const msg = document.getElementById('contact-msg').value;
+      const mailtoUrl = `mailto:krishnakanth.m16@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + msg)}`;
+      window.location.href = mailtoUrl;
+    }
+
+    // 5. Magnetic Button Micro-interaction
+    const magneticBtns = document.querySelectorAll('.magnetic-btn');
+    magneticBtns.forEach(btn => {
+      btn.addEventListener('mousemove', function(e) {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+      });
+      btn.addEventListener('mouseleave', function() {
+        btn.style.transform = 'translate(0px, 0px)';
+      });
+    });
+  </script>
+</body>
+</html>
